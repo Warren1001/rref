@@ -24,7 +24,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.kabryxis.auriel.Auriel</mainClass>
+              <mainClass>RREF</mainClass>
             </manifest>
           </archive>
         </configuration>

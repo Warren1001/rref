@@ -43,9 +43,9 @@ public class RREF {
 					//	System.out.print("'" + s + "', ");
 					//}
 					//System.out.println();
-					double   coef;
-					boolean  negative;
-					int      pos;
+					double  coef;
+					boolean negative;
+					int     pos;
 					
 					if ((arg.contains("s") && coefAndPos.length == 1) || coefAndPos.length > 2) {
 						System.err.printf("'%s' is an invalid formula equation.%n", line);
@@ -116,7 +116,9 @@ public class RREF {
 						break;
 					}
 				}
-				if (subEquationArray == null) continue;
+				if (subEquationArray == null) {
+					continue;
+				}
 				for (double[] equationArray : arrayEquationList) {
 					if (equationArray == subEquationArray) {
 						//System.out.println("arrays are the same: " + toString(equationArray) + " = " + toString(subEquationArray));
@@ -148,9 +150,9 @@ public class RREF {
 					if (i == size - 1) {
 						builder.append(": ");
 					}
-					double d = format(equationArray[i]);
-					int in = (int)d;
-					double r = d - in;
+					double d  = format(equationArray[i]);
+					int    in = (int)d;
+					double r  = d - in;
 					if (r == 0.0) {
 						builder.append(in);
 					} else {

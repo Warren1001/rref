@@ -99,7 +99,7 @@ public class RREF {
 					.collect(Collectors.toList());
 			
 			arrayEquationList.forEach(RREF::makePivotOne);
-			for (int pos = 0; pos < size - 1; pos++) {
+			for (int pos = 0; pos < Math.min(arrayEquationList.size(), size - 1); pos++) {
 				//System.out.println("doing RREF for pos: " + pos);
 				boolean  doingAbove       = true;
 				double[] subEquationArray = null;
